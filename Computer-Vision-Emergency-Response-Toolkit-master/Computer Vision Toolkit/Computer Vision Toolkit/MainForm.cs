@@ -59,6 +59,8 @@ using System.Windows.Forms;
 using SystemLog;
 
 
+
+
 namespace Computer_Vision_Toolkit
 {
 
@@ -960,6 +962,8 @@ namespace Computer_Vision_Toolkit
                 */
                 //Update lbl_Info with mouse positions
                 lbl_Info.Text = string.Format("( {0}, {1} )", mouse_x, mouse_y);
+                label6.Text = string.Format("{0}", mouse_y);
+                label5.Text = string.Format("{0}", mouse_x);
             }
             catch (Exception err)
             {
@@ -1109,9 +1113,9 @@ namespace Computer_Vision_Toolkit
                 {
                     int size = 90;
                     int offset = size / 2;
-                    float image_ratio = ((float)pictureBox1.Image.Width / (float)pictureBox1.Image.Height);
-                    int expected_height = (int)((float)pictureBox1.Width / image_ratio);
-                    int height_offset = (pictureBox1.Height - expected_height) / 2;
+                    float image_ratio = ((float)pictureBox2.Image.Width / (float)pictureBox2.Image.Height);
+                    int expected_height = (int)((float)pictureBox2.Width / image_ratio);
+                    int height_offset = (pictureBox2.Height - expected_height) / 2;
 
                     if (pbox2_left)
                     {
@@ -1280,6 +1284,26 @@ namespace Computer_Vision_Toolkit
                 elog.Log(err.TargetSite.ToString(), err.Message);
                 //MessageBox.Show(err.Message);
             }
+        }
+
+        private void btnColorHistogram_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void lbl_Info_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
 
 
